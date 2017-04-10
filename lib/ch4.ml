@@ -51,6 +51,14 @@ let rec take n l =
     match l with
     | hd :: tl -> hd :: take (n-1) tl
 
+(* function to drop element e from a list *)
+let rec drop e l =
+  if e = 0 then
+    l
+  else
+    match l with
+    | hd :: tl -> drop (e - 1) tl
+
 (* function to return even number on a list *)
 let rec even_items l =
   match l with
